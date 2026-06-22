@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hardle Solver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game" aria-label="Hardle solver board">
+        <header class="topbar">
+          <button class="icon-button" id="undo-button" type="button" title="Undo last row">↶</button>
+          <h1>HARDLE</h1>
+          <button class="icon-button" id="reset-button" type="button" title="Reset">×</button>
+        </header>
+
+        <div class="board" id="board" aria-label="Guesses"></div>
+        <div class="keyboard" id="keyboard" aria-label="Keyboard"></div>
+      </section>
+
+      <aside class="rank-panel" aria-label="Current recommendation ranking">
+        <div class="panel-head">
+          <div>
+            <h2>推荐排名</h2>
+            <p id="status">Loading word list...</p>
+          </div>
+        </div>
+
+        <div class="answer-box">
+          <label for="preset-answer">预设答案</label>
+          <div class="answer-input-row">
+            <input id="preset-answer" type="text" maxlength="5" autocomplete="off" spellcheck="false" placeholder="例如 CRAVE" />
+            <button id="clear-answer" type="button">清空</button>
+          </div>
+          <p id="answer-status">留空则手动调整每行绿色/黄色数字。</p>
+        </div>
+
+        <ol class="rank-list" id="rank-list"></ol>
+
+        <div class="candidate-panel">
+          <div class="metric">
+            <span>候选答案</span>
+            <strong id="candidate-count">0</strong>
+          </div>
+          <div class="candidate-list" id="candidate-list"></div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

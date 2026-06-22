@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.log
+*.pt
+*.npy
+.hardle_words_cache.json
+__pycache__/
