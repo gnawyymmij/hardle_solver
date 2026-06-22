@@ -407,8 +407,15 @@ function handleKey(value) {
   }
 }
 
+function isTextInputTarget(target) {
+  const element = target instanceof Element ? target : null;
+  if (!element) return false;
+  return Boolean(element.closest("input, textarea, select, [contenteditable='true']"));
+}
+
 function bindEvents() {
   document.addEventListener("keydown", (event) => {
+    if (isTextInputTarget(event.target)) return;
     if (event.ctrlKey || event.metaKey || event.altKey) return;
     if (event.key === "Enter" || event.key === "Backspace" || /^[a-zA-Z]$/.test(event.key)) {
       event.preventDefault();
