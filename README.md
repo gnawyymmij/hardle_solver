@@ -1,13 +1,15 @@
 # Hardle Solver
 
-An interactive helper for [hardle.org](https://hardle.org/).
+Interactive Hardle helper and information-gain solver for [hardle.org](https://hardle.org/).
+
+Live page: <https://gnawyymmij.github.io/hardle_solver/>
 
 Hardle uses Wordle-style guesses, but each guess only returns two numbers:
 
 - green letters: correct position
 - yellow letters: present in the answer but in a different position
 
-This page tracks the feedback and ranks next guesses by expected information.
+The web app tracks Hardle feedback, filters possible answers, and ranks next guesses by expected information under a broad uniform prior. It also includes a preset-answer mode for testing and manual tile marking for recording player deductions.
 
 ## Run locally
 

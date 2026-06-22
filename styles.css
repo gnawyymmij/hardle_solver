@@ -289,6 +289,31 @@ select {
   font-size: 13px;
 }
 
+.repo-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.repo-links a {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.repo-links a:hover {
+  text-decoration: underline;
+}
+
+.repo-links img {
+  display: block;
+  max-width: 100px;
+  height: 20px;
+}
+
 .toggle {
   display: flex;
   gap: 6px;
